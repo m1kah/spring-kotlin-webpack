@@ -48,7 +48,7 @@ module.exports = ({ mode }) => {
         ],
         devServer: {
             // contentBase: path.join(__dirname, "target/classes/public"),
-            https: true,
+            // https: true,
             port: 3000,
             historyApiFallback: true,
             watchOptions: {
