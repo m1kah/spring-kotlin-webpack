@@ -12,6 +12,7 @@
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
     "@webcomponents/webcomponentsjs": "^2.4.3",
     "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^5.1.1",
@@ -21,6 +22,7 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "@vaadin/vaadin-button": "^2.2.2",
     "@vaadin/vaadin-combo-box": "^5.0.11",
     "@vaadin/vaadin-date-picker": "^4.0.8",
     "@vaadin/vaadin-select": "^2.1.7"

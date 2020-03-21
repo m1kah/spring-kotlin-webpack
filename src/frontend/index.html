@@ -2,24 +2,48 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>WebComponents for Spring Boot</title>
+        <title>React for Spring Boot</title>
         <script src="webcomponents/webcomponents-loader.js"></script>
         <script>
         if (!window.customElements) { document.write('<!--'); }
         </script>
         <script src="webcomponents/custom-elements-es5-adapter.js"></script>
         <!-- ! DO NOT REMOVE THIS COMMENT, WE NEED ITS CLOSING MARKER -->
+        <!-- https://developers.google.com/web/fundamentals/web-components/shadowdom#stylefromoutside -->
+        <!-- https://cdn.vaadin.com/vaadin-lumo-styles/1.6.0/demo/colors.html -->
+        <!-- Some styling is possibly but extremely hard -->
+        <style>
+            vaadin-select, vaadin-combo-box {
+                min-width: 400px;
+            }
+            vaadin-item {
+                font-weight: bold;
+            }
+            vaadin-combo-box {
+                --lumo-border-radius: 0;
+                --lumo-primary-color-50pct: #0000ff;
+            }
+        </style>
     </head>
     <body>
         <div>
-            <vaadin-date-picker label="Date"></vaadin-date-picker>
+            <vaadin-date-picker id="date-picker" label="Date"></vaadin-date-picker>
         </div>
         <div>
-            <vaadin-select label="Select"></vaadin-select>
+            <vaadin-select id="select" label="Select" value="Red">
+                <template>
+                    <vaadin-list-box>
+                        <vaadin-item>Red</vaadin-item>
+                        <vaadin-item>Green</vaadin-item>
+                        <vaadin-item>Blue</vaadin-item>
+                    </vaadin-list-box>
+                </template>
+            </vaadin-select>
         </div>
         <div>
-            <vaadin-combo-box label="Combo Box"></vaadin-combo-box>
+            <vaadin-combo-box id="combo-box" label="Combo Box"></vaadin-combo-box>
         </div>
+        <vaadin-button id="button">Click!</vaadin-button>
+        <p id="reply"></p>
     </body>
-    <script src="/bundle.js"></script>
 </html>
