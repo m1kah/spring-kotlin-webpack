@@ -1,6 +1,10 @@
 Web Components for Spring Boot
 =
 
-IntelliJ IDEA
---
-In run configuration, change "On 'Update' action" to value "Update resource".
+Webpack dev server
+
+    npm run start
+
+Maven build runs npm and copies result to public path under target so that
+Spring will serve index.html.
+
